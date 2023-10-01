@@ -10,6 +10,6 @@ class DanceClass extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'start', 'end'
+        'name', 'start', 'end', 'teacher_id', 'location_id'
     ];
 }
