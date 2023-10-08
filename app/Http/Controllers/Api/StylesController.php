@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Style;
 use App\Http\Resources\StyleResource;
 use Illuminate\Http\Request;
@@ -63,3 +64,4 @@ class StylesController extends Controller
         return response()->json(null, 204);
     }
 }
+

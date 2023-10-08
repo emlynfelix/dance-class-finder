@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\DanceClassResource;
 use App\Models\DanceClass;
@@ -27,7 +28,7 @@ class DanceClassesController extends Controller
         $danceClassTeacherId = $request->input('teacher_id');
         $danceClassLocationId = $request->input('location_id');
 
-        $danceClass = DanceClasses::create([
+        $danceClass = DanceClass::create([
             'name' => $danceClassName,
             'start' => $danceClassStart,
             'end' => $danceClassEnd,
@@ -79,3 +80,4 @@ class DanceClassesController extends Controller
         return response()->json(null, 204);
     }
 }
+

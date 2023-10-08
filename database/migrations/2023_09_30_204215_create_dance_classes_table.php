@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('dance_classes', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->dateTime('start');
             $table->dateTime('end');
             $table->unsignedBigInteger('location_id');

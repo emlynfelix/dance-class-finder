@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Teacher;
 use App\Http\Resources\TeacherResource;
 use Illuminate\Http\Request;
@@ -67,3 +68,4 @@ class TeachersController extends Controller
         return response()->json(null, 204);
     }
 }
+

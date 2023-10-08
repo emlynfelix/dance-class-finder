@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Location;
 use App\Http\Resources\LocationResource;
 use Illuminate\Http\Request;
@@ -31,7 +32,7 @@ class LocationsController extends Controller
             'longitude' => $locationLongitude,
         ]);
         return response()->json([
-            'data' => new Location($location)
+            'data' => new LocationResource($location)
         ], 201);
     }
 
@@ -71,3 +72,4 @@ class LocationsController extends Controller
         return response()->json(null, 204);
     }
 }
+
