@@ -29,6 +29,7 @@ class TeachersController extends Controller
             'name' => $teacherName,
             'contact' => $teacherContact,
         ]);
+        $teacher->save();
         return response()->json([
             'data' => new TeacherResource($teacher)
         ], 201);
@@ -54,6 +55,7 @@ class TeachersController extends Controller
             'name' => $teacherName,
             'contact' => $teacherContact,
         ]);
+        $teacher->save();
         return response()->json([
             'data' => new TeacherResource($teacher)
         ], 200);

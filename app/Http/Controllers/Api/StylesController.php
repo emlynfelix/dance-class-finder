@@ -27,6 +27,7 @@ class StylesController extends Controller
         $style = Style::create([
             'name' => $styleName,
         ]);
+        $style->save();
         return response()->json([
             'data' => new StyleResource($style)
         ], 201);
@@ -50,6 +51,7 @@ class StylesController extends Controller
         $style->update([
             'name' => $styleName,
         ]);
+        $style->save();
         return response()->json([
             'data' => new StyleResource($style)
         ], 200);

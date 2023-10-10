@@ -31,6 +31,7 @@ class LocationsController extends Controller
             'latitude' => $locationLatitude,
             'longitude' => $locationLongitude,
         ]);
+        $location->save();
         return response()->json([
             'data' => new LocationResource($location)
         ], 201);
@@ -58,6 +59,7 @@ class LocationsController extends Controller
             'latitude' => $locationLatitude,
             'longitude' => $locationLongitude,
         ]);
+        $location->save();
         return response()->json([
             'data' => new LocationResource($location)
         ], 200);

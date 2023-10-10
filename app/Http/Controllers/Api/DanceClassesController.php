@@ -14,7 +14,7 @@ class DanceClassesController extends Controller
      */
     public function index()
     {
-        return DanceClass::all();
+        return DanceClassResource::collection(DanceClass::all());
     }
 
     /**
@@ -23,8 +23,8 @@ class DanceClassesController extends Controller
     public function store(Request $request)
     {
         $danceClassName = $request->input('name');
-        $danceClassStart = $request->input('start');
-        $danceClassEnd = $request->input('end');
+        $danceClassStart = date('Y-m-d H:i:s', strtotime($request->input('start')));
+        $danceClassEnd = date('Y-m-d H:i:s', strtotime($request->input('end')));
         $danceClassTeacherId = $request->input('teacher_id');
         $danceClassLocationId = $request->input('location_id');
 
@@ -35,6 +35,7 @@ class DanceClassesController extends Controller
             'teacher_id' => $danceClassTeacherId,
             'location_id' => $danceClassLocationId,
         ]);
+        $danceClass->save();
         return response()->json([
             'data' => new DanceClassResource($danceClass)
         ], 201);
@@ -54,8 +55,8 @@ class DanceClassesController extends Controller
     public function update(Request $request, DanceClass $danceClass)
     {
         $danceClassName = $request->input('name');
-        $danceClassStart = $request->input('start');
-        $danceClassEnd = $request->input('end');
+        $danceClassStart = date('Y-m-d H:i:s', strtotime($request->input('start')));
+        $danceClassEnd = date('Y-m-d H:i:s', strtotime($request->input('end')));
         $danceClassTeacherId = $request->input('teacher_id');
         $danceClassLocationId = $request->input('location_id');
 
@@ -66,6 +67,7 @@ class DanceClassesController extends Controller
             'teacher_id' => $danceClassTeacherId,
             'location_id' => $danceClassLocationId,
         ]);
+        $danceClass->save();
         return response()->json([
             'data' => new DanceClassResource($danceClass)
         ], 200);
