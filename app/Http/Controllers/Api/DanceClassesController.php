@@ -27,6 +27,7 @@ class DanceClassesController extends Controller
         $danceClassEnd = date('Y-m-d H:i:s', strtotime($request->input('end')));
         $danceClassTeacherId = $request->input('teacher_id');
         $danceClassLocationId = $request->input('location_id');
+        $danceClassStyleIds = $request->input('style_ids');
 
         $danceClass = DanceClass::create([
             'name' => $danceClassName,
@@ -35,6 +36,8 @@ class DanceClassesController extends Controller
             'teacher_id' => $danceClassTeacherId,
             'location_id' => $danceClassLocationId,
         ]);
+        $danceClass->save();
+        $danceClass->styles()->attach($danceClassStyleIds);
         $danceClass->save();
         return response()->json([
             'data' => new DanceClassResource($danceClass)
@@ -59,6 +62,7 @@ class DanceClassesController extends Controller
         $danceClassEnd = date('Y-m-d H:i:s', strtotime($request->input('end')));
         $danceClassTeacherId = $request->input('teacher_id');
         $danceClassLocationId = $request->input('location_id');
+        $danceClassStyleIds = $request->input('style_ids');
 
         $danceClass->update([
             'name' => $danceClassName,
@@ -67,6 +71,8 @@ class DanceClassesController extends Controller
             'teacher_id' => $danceClassTeacherId,
             'location_id' => $danceClassLocationId,
         ]);
+        $danceClass->save();
+        $danceClass->styles()->sync($danceClassStyleIds);
         $danceClass->save();
         return response()->json([
             'data' => new DanceClassResource($danceClass)

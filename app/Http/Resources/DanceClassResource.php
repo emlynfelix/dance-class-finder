@@ -21,6 +21,7 @@ class DanceClassResource extends JsonResource
             'end' => $this->end,
             'location' => $this->location,
             'teacher' => $this->teacher,
+            'styles' => $this->styles,
         ];
     }
 }
