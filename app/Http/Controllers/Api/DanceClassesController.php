@@ -12,9 +12,9 @@ class DanceClassesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return DanceClassResource::collection(DanceClass::all());
+        return DanceClassResource::collection(DanceClass::filterByQueryString()->get());
     }
 
     /**

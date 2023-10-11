@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "699adb9577dd8ccd55fef00bab5816b6",
+    "content-hash": "f3040867b2b3385ba69c97cef266a48f",
     "packages": [
         {
             "name": "brick/math",
@@ -969,6 +969,86 @@
                 }
             ],
             "time": "2023-08-27T10:19:19+00:00"
+        },
+        {
+            "name": "lacodix/laravel-model-filter",
+            "version": "v1.9.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lacodix/laravel-model-filter.git",
+                "reference": "f581350f6c4d3c1b5fcdc2ec9415018d94752869"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lacodix/laravel-model-filter/zipball/f581350f6c4d3c1b5fcdc2ec9415018d94752869",
+                "reference": "f581350f6c4d3c1b5fcdc2ec9415018d94752869",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "illuminate/contracts": "^9.0|^10.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.13.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.13",
+                "illuminate/database": "^9.47|^10.0",
+                "illuminate/support": "^9.47|^10.0",
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^6.0",
+                "nunomaduro/larastan": "^2.0.1",
+                "nunomaduro/phpinsights": "^2.6",
+                "orchestra/testbench": "^7.19|^8.0",
+                "pestphp/pest": "^1.21",
+                "pestphp/pest-plugin-faker": "^1.0",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "rector/rector": "^0.15.7"
+            },
+            "type": "laravel-package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lacodix\\LaravelModelFilter\\LaravelModelFilterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lacodix\\LaravelModelFilter\\": "src",
+                    "Lacodix\\LaravelModelFilter\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dominik Müller",
+                    "email": "dominik@lacodix.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel package to filter, search and sort models with ease while fetching from database.",
+            "homepage": "https://github.com/lacodix/laravel-model-filter",
+            "keywords": [
+                "eloquent",
+                "filter",
+                "filters",
+                "lacodix",
+                "laravel",
+                "model",
+                "search"
+            ],
+            "support": {
+                "issues": "https://github.com/lacodix/laravel-model-filter/issues",
+                "source": "https://github.com/lacodix/laravel-model-filter/tree/v1.9.4"
+            },
+            "time": "2023-07-25T13:40:03+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3104,6 +3184,66 @@
                 }
             ],
             "time": "2023-04-15T23:01:58+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.16.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "cc7c991555a37f9fa6b814aa03af73f88026a83d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/cc7c991555a37f9fa6b814aa03af73f88026a83d",
+                "reference": "cc7c991555a37f9fa6b814aa03af73f88026a83d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.16.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-08-23T09:04:39+00:00"
         },
         {
             "name": "symfony/console",
